@@ -8,8 +8,8 @@
 </head>
 
 <body data-ng-app="flapperNews" data-ng-controller="MainCtrl">
-    <div>
-        {{test}}
+    <div data-ng-repeat="post in posts">
+        {{post.title}} -upvotes:{{post.upvotes}}
     </div>
 </body>
 
