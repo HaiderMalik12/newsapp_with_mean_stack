@@ -10,12 +10,14 @@ app.controller('MainCtrl', [
             { title: 'post4', upvotes: 4 },
             { title: 'post5', upvotes: 7 }
         ];
+       
         $scope.addPost = function() {
             if (!$scope.title || $scope.title === '') {
                 return;
             }
-            $scope.posts.push({ title: 'A new Post', upvotes: 0 });
+            $scope.posts.push({ title: $scope.title, upvotes: 0, link: $scope.link });
             $scope.title = "";
+            $scope.link = "";
         }
         $scope.incrementUpvotes = function(post) {
 
